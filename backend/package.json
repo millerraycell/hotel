@@ -4,8 +4,7 @@
   "description": "Hotel desenvolvido para a disciplina de Engenharia de Software II, da Universidade Federal de Roraima",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon",
-    "production": "pm2 start index.js --name hotel-backend"
+    "dev": "nodemon index.js"
   },
   "repository": "https://github.com/millerraycell/hotel.git",
   "author": "Markus Kaul/ Miller Raycell/ Rodrigo Andrade",
@@ -25,6 +24,6 @@
     "pm2": "^4.1.2"
   },
   "devDependencies": {
-    "nodemon": "1.19.4"
+    "nodemon": "^1.19.4"
   }
 }
