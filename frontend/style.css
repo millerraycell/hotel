@@ -6,7 +6,7 @@ body{
     border-width: thin;
     border-style: solid;
     border-color: black;
-    border-radius: 5%;
+    border-radius: 10px;
     width: 40%;
     position: absolute;
     left: 30%;
@@ -17,5 +17,18 @@ body{
 
 .divLogin H1{
     text-align: center;
+}
+
+.divCentro{
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    padding: 1%;
+    background-color: white;
 }
 
