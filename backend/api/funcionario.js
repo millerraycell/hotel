@@ -63,8 +63,10 @@ module.exports = app => {
     const deletar = (req, res) => {
         const funcionarioId = req.params;
         app.db('funcionarios')
-            .where({id : funcionarioId})
-            .del()
+        .delete()
+        .where({id : req.params.id})
+        .then(_ => res.status(204).send())
+        .catch(err => res.status(500).send(err))
     };
 
     return {save, get, deletar}

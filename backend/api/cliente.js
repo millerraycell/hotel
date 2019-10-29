@@ -49,10 +49,11 @@ module.exports = app => {
     };
 
     const deletar = (req, res) => {
-        const clienteId = req.params;
         app.db('clientes')
-            .where({id : clienteId})
-            .del()
+            .delete()
+            .where({id : req.params.id})
+            .then(_ => res.status(204).send())
+            .catch(err => res.status(500).send(err))
     };
 
     return {save, get, deletar}
