@@ -1,0 +1,21 @@
+body{
+    background-image: url("Image/fundo-azul.jpg");
+}   
+
+.divLogin{
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5%;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    padding: 2%;
+
+}
+
+.divLogin H1{
+    text-align: center;
+}
+
