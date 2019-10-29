@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/local/bin/yarn add bcrypt
+  /usr/bin/node /usr/local/bin/yarn add jwt-simple
 
 PATH: 
   /opt/ros/melodic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/home/miller/Documentos/hotel/backend/node_modules/touch/node_modules/nopt'
+  Error: EACCES: permission denied, unlink '/home/miller/Documentos/hotel/backend/node_modules/.bin/atob'
 
 npm manifest: 
   {
