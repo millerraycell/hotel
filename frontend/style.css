@@ -6,7 +6,7 @@ body{
     border-width: thin;
     border-style: solid;
     border-color: black;
-    border-radius: 5%;
+    border-radius: 10px;
     width: 40%;
     position: absolute;
     left: 30%;
