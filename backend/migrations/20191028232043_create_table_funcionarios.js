@@ -5,7 +5,7 @@ exports.up = function(knex) {
         table.boolean('gerente').notNull().defaultTo(false),
   
         table.string('name').notNull(),
-        table.string('cpf').notNull(),
+        table.string('cpf').notNull().unique(),
         table.string('rg').notNull(),
         table.string('telefone').notNull(),
         table.date('dataAniversario').notNull(),
