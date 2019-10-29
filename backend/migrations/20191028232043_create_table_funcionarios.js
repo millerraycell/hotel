@@ -11,7 +11,8 @@ exports.up = function(knex) {
         table.date('dataAniversario').notNull(),
         table.string('email').unique().notNull(), 
   
-        table.timestamps();
+        table.timestamp('created_at').defaultTo(knex.fn.now());
+        table.timestamp('updated_At').defaultTo(knex.fn.now());
     })
   };
   

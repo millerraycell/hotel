@@ -5,13 +5,8 @@ exports.up = function(knex) {
         table.float('preco',2).notNull(),
         table.boolean('locado').notNull().defaultTo(false),
 
-        table.date('dataEntrada').notNull(),
-        table.date('dataSaida').notNull(),
-
-        table.integer('userId').references('id')
-            .inTable('clientes'),
-
-        table.timestamps();
+        table.timestamp('created_at').defaultTo(knex.fn.now());
+        table.timestamp('updated_At').defaultTo(knex.fn.now());  
 
     })
   

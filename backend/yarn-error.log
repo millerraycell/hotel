@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/local/bin/yarn add body-parser
+  /usr/bin/node /usr/local/bin/yarn add axios
 
 PATH: 
   /opt/ros/melodic/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
@@ -23,7 +23,7 @@ npm manifest:
     "description": "Hotel desenvolvido para a disciplina de Engenharia de Software II, da Universidade Federal de Roraima",
     "main": "index.js",
     "scripts": {
-      "dev": "nodemon index.js"
+      "start": "nodemon index.js"
     },
     "repository": "https://github.com/millerraycell/hotel.git",
     "author": "Markus Kaul/ Miller Raycell/ Rodrigo Andrade",

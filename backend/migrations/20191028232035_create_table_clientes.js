@@ -10,7 +10,8 @@ exports.up = function(knex) {
       table.string('email').notNull(),
       table.string('formaDePagamento').notNull(),
   
-      table.timestamps();  
+      table.timestamp('created_at').defaultTo(knex.fn.now());
+      table.timestamp('updated_At').defaultTo(knex.fn.now());  
     })
   };
   
