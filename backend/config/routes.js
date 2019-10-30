@@ -5,9 +5,9 @@ module.exports = app => {
     app.route('/quartos')
         .get(app.api.quarto.get)
 
-    app.route('/alocacao')
+    app.route('/locacao')
         .post(app.api.locacao.alocar)
-        //.put(app.api.locacao.desalocar)
+        .get(app.api.locacao.get)
 
     app.route('/funcionarios')
         .post(app.api.funcionario.save)

@@ -31,5 +31,13 @@ module.exports = app => {
 
         update(quarto.numero);
     }
-    return {alocar}
+
+    const get = async (req,res) =>{
+        app.db('locacao')
+            .select('quartoId', 'clienteId', 'dataEntrada', 'dataSaida')
+            .then(locacoes => res.json(locacoes))
+            .catch(err => res.status(500).send(err))
+    }
+    
+    return {alocar,get}
 }
