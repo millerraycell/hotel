@@ -3,26 +3,32 @@
         <a class="toggle" @click="toggleMenu" v-if="!hideToggle">
             <i class ="fa fa-lg" :class="icon"></i>
         </a>
-        <h1 class="title">
-                {{title}}
+        <h1 class="title"> 
+            <router-link to="/">{{title}}</router-link>
         </h1>
+        <FuncionarioDropdown v-if="!hideFuncionarioDropdown"/>
     </header>
 </template>
 
 <script>
+import FuncionarioDropdown from './FuncionarioDropdown'
+
 export default {
     name : "Header",
+    components : {FuncionarioDropdown},
     props: {
         title: String,
-        hideToggle: Boolean
+        hideToggle: Boolean,
+        hideFuncionarioDropdown: Boolean
     },
     computed:{
         icon(){
-            return "fa-angle-left"
+            return this.$store.state.isMenuVisible ? "fa-angle-left" : "fa-angle-down"
         }
     },
     methods:{
         toggleMenu(){
+            this.$store.commit('toggleMenu')
         }
     }
 }
@@ -47,6 +53,12 @@ export default {
     }
 
     .title a{
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .title a:hover{
+        text-decoration: none;
         color: #ffffff;
         text-decoration: none;
     }
