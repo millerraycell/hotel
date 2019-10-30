@@ -9,10 +9,10 @@
         </div>
         <div class="funcionario-dropdown-content">
             <router-link to="/admin">
-                <i class="fa fa-cogs"></i>Adminstração
+                <i class="fa fa-cogs"></i> Adminstração
             </router-link>
 
-            <a href><i class="fa fa-sign-out"></i>Sair</a> 
+            <a href><i class="fa fa-sign-out"></i> Sair</a> 
         </div>
     </div>
 </template>

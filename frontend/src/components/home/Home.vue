@@ -1,8 +1,8 @@
 <template>
     <div class="home">
-        <PageTitle icon="fa fa-home" main='Dashboard' sub='Opções hotel'/>
+        <PageTitle icon="fa fa-bed" main=' Acomodações' sub='Quartos do hotel'/>
         <div class="quartos">
-            <Quartos title = "Quartos" icon = "fa fa-bed" color='#d54d50' />
+            <b-table hover striped :items="quartos" :fields="fields"></b-table>
         </div>
     </div>
 </template>
@@ -18,12 +18,19 @@ export default {
     components: {PageTitle, Quartos},
     data : function(){
         return {
-            quarto:{}
+            quartos:[],
+            fields:[
+                {key : 'numero', label : 'Número do Quarto', sortable: true},
+                {key : 'tipo', label : 'Quantidade de pessoas', sortable: true},
+                {key : 'preco', label : 'Valor', sortable: true},
+                {key : 'locado', label : 'Disponível', sortable: true, 
+                formatter: value => value ? 'Não' : 'Sim'},
+            ]
         }
     },
     methods:{
         getQuartos(){
-            axios.get(`${baseApiUrl}/quartos`).then(res => this.quarto = res.data)
+            axios.get(`${baseApiUrl}/quartos`).then(res => this.quartos = res.data)
         }
     },
     mounted(){

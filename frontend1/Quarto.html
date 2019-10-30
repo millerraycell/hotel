@@ -57,26 +57,13 @@
 </template>
 
 <script>
-    import {baseApiUrl} from '@/global';
-    import axios from 'axios';
-
-    export default{
-        name : 'Quartos',
-        data : function() {
-            return{
-                mode : 'get',
-                quarto: {},
-                quarto: []
-            }
-        },
-        methods: {
-            loadQuartos() {
-                const url = `${baseApiUrl}/quartos`
-                axios.get(url).then(res => {
-                    this.quarto = res.data
-                })
-            }
-        }
+    const axios = require('axios');
+    const loadQuartos  = function(){
+        const url = `http://localhost:3000/quartos`
+        axios.get(url).then(res => {
+            this.quartos = res.data
+            console.log(this.quarto)
+        })
     }
     
 </script>
