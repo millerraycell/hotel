@@ -18,7 +18,24 @@
             <input type="password" class="form-control" id="pwd">
         </div> 
         <a href="Principal.html" class="btn btn-primary" role="button">Entrar</a>
-        <script></script>
+        <script>
+            import {baseApiUrl} from '@/global';
+            import axios from 'axios';
+
+            export default {
+                name: 'Login',
+                data: function(){
+                    return{
+                        mode : 'singin',
+                        funcionario: {},
+                        funcionario: []
+                    }
+                },
+                methods:{
+                    
+                }
+            }
+        </script>
     </div>
 </body>
 </html>
